@@ -7,38 +7,41 @@
 
 import SwiftUI
 
-struct TextImputView: View {
+struct TextView: View {
     
-    @Binding var noticeText: String
-    @Binding var isSettingsOpen: Bool
+    @ObservedObject var viewModel: AchtungViewModel
+    @Binding var isTextViewOpen: Bool
+    
+    @State private var achtungText: String = ""
+    @State private var selectedColor: PickerColors = .blackWhite
+    @State private var isAchtungShow: Bool = false
     
     var body: some View {
         VStack {
-            if !isSettingsOpen {
+            if !isTextViewOpen {
                 Spacer()
             }
-            
             VStack(alignment: .leading) {
                 
-                if isSettingsOpen {
+                if isTextViewOpen {
                     HStack {
                         Text("Customise your achtung:")
                             .font(.largeTitle)
                         Spacer()
                         Button {
                             withAnimation(.spring()) {
-                                isSettingsOpen.toggle()
+                                isTextViewOpen.toggle()
                             }
                         } label: {
-                            Image(systemName: "heart")
-                            
+                            Image(systemName: "xmark.circle.fill")
                         }
-
+                        
                     }
+                    ColorPickerView(selectedColors: $selectedColor)
+                    Spacer()
                 }
-
                 HStack {
-                    TextField("Create ACHTUNG", text: $noticeText)
+                    TextField("Create ACHTUNG", text: $achtungText)
                         .padding(16)
                         .padding(.leading, 30)
                         .background(.white)
@@ -56,6 +59,11 @@ struct TextImputView: View {
                         }
                     
                     Button {
+                        saveInRealm()
+                        withAnimation(.spring()) {
+                            isAchtungShow.toggle()
+                        }
+                        
                         
                     } label: {
                         Image(systemName: "arrow.right.circle.fill")
@@ -67,7 +75,7 @@ struct TextImputView: View {
                 
                 Button {
                     withAnimation(.spring()) {
-                        isSettingsOpen.toggle()
+                        isTextViewOpen.toggle()
                     }
                     
                 } label: {
@@ -79,22 +87,31 @@ struct TextImputView: View {
                     .background(.ultraThinMaterial)
                     .cornerRadius(12)
                 }
-               
                 
-                if isSettingsOpen {
-                    Spacer()
-                }
             }
             .padding(20)
             .cornerRadius(30)
             .background(.ultraThinMaterial)
+            .fullScreenCover(isPresented: $isAchtungShow) {
+                achtungText = ""
+                isTextViewOpen = false
+            } content: {
+                AchtungView(text: achtungText, colors: selectedColor.getColors(pickerColors: selectedColor))
+            }
+
         }
     }
     
-}
-
-struct TextImputView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    private func saveInRealm() {
+        let achtungRealm = AchtungRealm()
+        achtungRealm.colors = selectedColor.rawValue
+        achtungRealm.text = achtungText
+        viewModel.$myAchtungs.append(achtungRealm)
     }
 }
+
+//struct TextImputView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

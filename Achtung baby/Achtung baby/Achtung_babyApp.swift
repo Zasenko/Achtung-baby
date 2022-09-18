@@ -11,7 +11,7 @@ import SwiftUI
 struct Achtung_babyApp: App {
     var body: some Scene {
         WindowGroup {
-            ColorPickerView(myColors: MyColors())
+            ContentView()
         }
     }
 }

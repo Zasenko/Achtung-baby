@@ -6,10 +6,6 @@
 //
 
 import SwiftUI
-//
-//struct HecColor: Identifiable {
-//    let id: String
-//}
 
 extension Color {
     init(hex: String) {
@@ -36,5 +32,4 @@ extension Color {
             opacity: Double(a) / 255
         )
     }
-    
 }

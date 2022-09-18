@@ -7,80 +7,52 @@
 
 import SwiftUI
 
-
 enum PickerColors: String, CaseIterable {
-    
     case blackWhite,
          blackRed,
          blackPink,
          blackYellow,
          blackGreen
-    
-    case yellowBlue
+    case yellowBlue,
+         yellowRed,
+         yellowViolet
+    case greenBlue,
+         greenPink
+    case redYellow,
+         redGreen
+
+    static func enumValueFromString(string value: String) -> PickerColors? {
+            return self.allCases.first{ "\($0)" == value }
+        }
 }
 
 extension PickerColors {
-    func test(pickerColors: PickerColors) -> some View {
+    func getColors(pickerColors: PickerColors) -> [Color] {
         switch pickerColors {
         case .blackWhite:
-            return RoundView(colors: [Color(hex: "#FFFFFF"), Color(hex: "#000000")])
+            return [Color(hex: "#000000"), Color(hex: "#FFFFFF")]
         case .blackRed:
-            return RoundView(colors: [Color(hex: "#FF0000"), Color(hex: "#000000")])
+            return [Color(hex: "#000000"), Color(hex: "#FF0000")]
         case .blackPink:
-            return RoundView(colors: [Color(hex: "#FF00FF"), Color(hex: "#000000")])
+            return [Color(hex: "#000000"), Color(hex: "#FF00FF")]
         case .blackYellow:
-            return RoundView(colors: [Color(hex: "#FFFF00"), Color(hex: "#000000")])
+            return [Color(hex: "#000000"), Color(hex: "#FFFF00")]
         case .blackGreen:
-            return RoundView(colors: [Color(hex: "#00FF00"), Color(hex: "#000000")])
+            return [Color(hex: "#000000"), Color(hex: "#00FF00")]
         case .yellowBlue:
-            return RoundView(colors: [Color(hex: "#0000FF"), Color(hex: "#FFFF00")])
+            return [Color(hex: "#FFFF00"), Color(hex: "#0000FF")]
+        case .yellowRed:
+            return [Color(hex: "#FFFF00"), Color(hex: "#FF0000")]
+        case .yellowViolet:
+            return [Color(hex: "#FFFF00"), Color(hex: "#8A2BE2")]
+        case .greenBlue:
+            return [Color(hex: "#00FF00"), Color(hex: "#0000FF")]
+        case .greenPink:
+            return [Color(hex: "#00FF00"), Color(hex: "#FF1493")]
+        case .redYellow:
+            return [Color(hex: "#FF0000"), Color(hex: "#00FF00")]
+        case .redGreen:
+            return [Color(hex: "#FF0000"), Color(hex: "#00FF00")]
         }
     }
-}
-
-struct RoundView: View {
-    let colors: [Color]
-    
-    var body: some View {
-        ZStack() {
-            Circle()
-               
-                .frame(width: 80, height: 80)
-                .foregroundColor(colors[0])
-                
-            
-            Semicircle()                .foregroundColor(colors[1])
-                .mask(
-                    Circle().frame(width: 73, height: 73)
-                )
-                
-        }
-        .frame(width: 80)
-    }
-}
-
-
-
-class MyColors: ObservableObject {
-    
-    @Published var myTwoColors: PickerColors = .blackWhite
-   
-    var basicColors: [PickerColors] = PickerColors.allCases
-    
-    
-    func find(colors: PickerColors) -> Bool {
-        if (colors == myTwoColors) {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-//    func onTap(color: HecColor) {
-//        let a = find(color: color)
-//        if !a {
-//            myTwoColors.append(color)
-//            myTwoColors.remove(at: 0)
-//        }
-//    }
 }

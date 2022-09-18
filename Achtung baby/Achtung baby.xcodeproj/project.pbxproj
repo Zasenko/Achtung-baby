@@ -7,36 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2BDCE028D47D8400D41634 /* AchtungViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BDCDF28D47D8400D41634 /* AchtungViewModel.swift */; };
+		0A2BDCE328D47E6300D41634 /* PickerRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BDCE228D47E6300D41634 /* PickerRoundView.swift */; };
 		0A7357BF28D371BC00BFE328 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7357BE28D371BC00BFE328 /* CardView.swift */; };
 		0A7357C128D3787200BFE328 /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7357C028D3787200BFE328 /* MyColors.swift */; };
 		0A7357C328D378F500BFE328 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7357C228D378F500BFE328 /* ColorPickerView.swift */; };
-		0A7357C528D393B700BFE328 /* RoundPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7357C428D393B700BFE328 /* RoundPicker.swift */; };
 		0A7DED2028D31876003ED3E0 /* Achtung_babyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED1F28D31876003ED3E0 /* Achtung_babyApp.swift */; };
 		0A7DED2228D31876003ED3E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED2128D31876003ED3E0 /* ContentView.swift */; };
 		0A7DED2428D31877003ED3E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DED2328D31877003ED3E0 /* Assets.xcassets */; };
 		0A7DED2728D31877003ED3E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DED2628D31877003ED3E0 /* Preview Assets.xcassets */; };
-		0A7DED2E28D31910003ED3E0 /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED2D28D31910003ED3E0 /* NoticeModel.swift */; };
+		0A7DED2E28D31910003ED3E0 /* AchtungRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED2D28D31910003ED3E0 /* AchtungRealm.swift */; };
 		0A7DED3128D319BC003ED3E0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7DED3028D319BC003ED3E0 /* Realm */; };
 		0A7DED3328D319BC003ED3E0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A7DED3228D319BC003ED3E0 /* RealmSwift */; };
 		0A7DED3628D31E75003ED3E0 /* HecColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED3528D31E75003ED3E0 /* HecColor.swift */; };
-		0A7DED3A28D351E7003ED3E0 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED3928D351E7003ED3E0 /* NoticeView.swift */; };
-		0A7DED3C28D3541E003ED3E0 /* TextImputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED3B28D3541E003ED3E0 /* TextImputView.swift */; };
+		0A7DED3A28D351E7003ED3E0 /* AchtungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED3928D351E7003ED3E0 /* AchtungView.swift */; };
+		0A7DED3C28D3541E003ED3E0 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED3B28D3541E003ED3E0 /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2BDCDF28D47D8400D41634 /* AchtungViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchtungViewModel.swift; sourceTree = "<group>"; };
+		0A2BDCE228D47E6300D41634 /* PickerRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRoundView.swift; sourceTree = "<group>"; };
 		0A7357BE28D371BC00BFE328 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0A7357C028D3787200BFE328 /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		0A7357C228D378F500BFE328 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
-		0A7357C428D393B700BFE328 /* RoundPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundPicker.swift; sourceTree = "<group>"; };
 		0A7DED1C28D31876003ED3E0 /* Achtung baby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Achtung baby.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7DED1F28D31876003ED3E0 /* Achtung_babyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achtung_babyApp.swift; sourceTree = "<group>"; };
 		0A7DED2128D31876003ED3E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A7DED2328D31877003ED3E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A7DED2628D31877003ED3E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0A7DED2D28D31910003ED3E0 /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
+		0A7DED2D28D31910003ED3E0 /* AchtungRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchtungRealm.swift; sourceTree = "<group>"; };
 		0A7DED3528D31E75003ED3E0 /* HecColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HecColor.swift; sourceTree = "<group>"; };
-		0A7DED3928D351E7003ED3E0 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
-		0A7DED3B28D3541E003ED3E0 /* TextImputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextImputView.swift; sourceTree = "<group>"; };
+		0A7DED3928D351E7003ED3E0 /* AchtungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchtungView.swift; sourceTree = "<group>"; };
+		0A7DED3B28D3541E003ED3E0 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2BDCDE28D47D5300D41634 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A2BDCDF28D47D8400D41634 /* AchtungViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0A2BDCE128D47E2500D41634 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A7DED2128D31876003ED3E0 /* ContentView.swift */,
+				0A7357BE28D371BC00BFE328 /* CardView.swift */,
+				0A7DED3B28D3541E003ED3E0 /* TextView.swift */,
+				0A7357C228D378F500BFE328 /* ColorPickerView.swift */,
+				0A2BDCE228D47E6300D41634 /* PickerRoundView.swift */,
+				0A7DED3928D351E7003ED3E0 /* AchtungView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0A7DED1328D31876003ED3E0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				0A7DED1F28D31876003ED3E0 /* Achtung_babyApp.swift */,
-				0A7DED2128D31876003ED3E0 /* ContentView.swift */,
-				0A7DED3B28D3541E003ED3E0 /* TextImputView.swift */,
-				0A7357BE28D371BC00BFE328 /* CardView.swift */,
-				0A7DED3928D351E7003ED3E0 /* NoticeView.swift */,
-				0A7357C228D378F500BFE328 /* ColorPickerView.swift */,
+				0A2BDCDE28D47D5300D41634 /* ViewModel */,
 				0A7DED3428D31BBA003ED3E0 /* Model */,
+				0A2BDCE128D47E2500D41634 /* View */,
 				0A7DED2328D31877003ED3E0 /* Assets.xcassets */,
 				0A7DED2528D31877003ED3E0 /* Preview Content */,
 			);
@@ -95,10 +115,9 @@
 		0A7DED3428D31BBA003ED3E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A7DED2D28D31910003ED3E0 /* NoticeModel.swift */,
+				0A7DED2D28D31910003ED3E0 /* AchtungRealm.swift */,
 				0A7357C028D3787200BFE328 /* MyColors.swift */,
 				0A7DED3528D31E75003ED3E0 /* HecColor.swift */,
-				0A7357C428D393B700BFE328 /* RoundPicker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,16 +199,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A7357C528D393B700BFE328 /* RoundPicker.swift in Sources */,
+				0A2BDCE328D47E6300D41634 /* PickerRoundView.swift in Sources */,
 				0A7357BF28D371BC00BFE328 /* CardView.swift in Sources */,
 				0A7357C128D3787200BFE328 /* MyColors.swift in Sources */,
-				0A7DED3A28D351E7003ED3E0 /* NoticeView.swift in Sources */,
+				0A7DED3A28D351E7003ED3E0 /* AchtungView.swift in Sources */,
 				0A7DED3628D31E75003ED3E0 /* HecColor.swift in Sources */,
-				0A7DED2E28D31910003ED3E0 /* NoticeModel.swift in Sources */,
+				0A7DED2E28D31910003ED3E0 /* AchtungRealm.swift in Sources */,
+				0A2BDCE028D47D8400D41634 /* AchtungViewModel.swift in Sources */,
 				0A7357C328D378F500BFE328 /* ColorPickerView.swift in Sources */,
 				0A7DED2228D31876003ED3E0 /* ContentView.swift in Sources */,
 				0A7DED2028D31876003ED3E0 /* Achtung_babyApp.swift in Sources */,
-				0A7DED3C28D3541E003ED3E0 /* TextImputView.swift in Sources */,
+				0A7DED3C28D3541E003ED3E0 /* TextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
