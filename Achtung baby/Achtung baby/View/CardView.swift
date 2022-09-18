@@ -24,7 +24,7 @@ struct CardView: View {
             Text(achtung.text)
                 .padding()
                 .multilineTextAlignment(.center)
-                .font(.system(size: 1000, weight: .black))
+                .font(.custom("MarvinVisions-Bold", size: 1000))
                 .minimumScaleFactor(0.01)
                 .lineLimit(4)
                 .frame(width: UIScreen.main.bounds.width / 2.5, height: UIScreen.main.bounds.width / 3.8)

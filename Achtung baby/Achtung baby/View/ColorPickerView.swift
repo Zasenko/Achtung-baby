@@ -22,10 +22,9 @@ struct ColorPickerView: View {
                         selectedColors = pickerColors
                     }
                 
-            }//-ForEach
-        }//-LazyVGrid
+            }
+        }
     }
-    
 }
 
 

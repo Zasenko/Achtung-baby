@@ -22,6 +22,7 @@
 		0A7DED3628D31E75003ED3E0 /* HecColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED3528D31E75003ED3E0 /* HecColor.swift */; };
 		0A7DED3A28D351E7003ED3E0 /* AchtungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED3928D351E7003ED3E0 /* AchtungView.swift */; };
 		0A7DED3C28D3541E003ED3E0 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DED3B28D3541E003ED3E0 /* TextView.swift */; };
+		0AE3DC8628D7993600BDFA7C /* MarvinVisions-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AE3DC8528D793B200BDFA7C /* MarvinVisions-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		0A7DED3528D31E75003ED3E0 /* HecColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HecColor.swift; sourceTree = "<group>"; };
 		0A7DED3928D351E7003ED3E0 /* AchtungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchtungView.swift; sourceTree = "<group>"; };
 		0A7DED3B28D3541E003ED3E0 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		0AE3DC8528D793B200BDFA7C /* MarvinVisions-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarvinVisions-Bold.otf"; sourceTree = "<group>"; };
+		0AE3DC8728D7997D00BDFA7C /* Achtung-baby-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Achtung-baby-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +97,13 @@
 		0A7DED1E28D31876003ED3E0 /* Achtung baby */ = {
 			isa = PBXGroup;
 			children = (
+				0AE3DC8728D7997D00BDFA7C /* Achtung-baby-Info.plist */,
 				0A7DED1F28D31876003ED3E0 /* Achtung_babyApp.swift */,
 				0A2BDCDE28D47D5300D41634 /* ViewModel */,
 				0A7DED3428D31BBA003ED3E0 /* Model */,
 				0A2BDCE128D47E2500D41634 /* View */,
 				0A7DED2328D31877003ED3E0 /* Assets.xcassets */,
+				0AE3DC8428D7931C00BDFA7C /* Fonts */,
 				0A7DED2528D31877003ED3E0 /* Preview Content */,
 			);
 			path = "Achtung baby";
@@ -120,6 +125,14 @@
 				0A7DED3528D31E75003ED3E0 /* HecColor.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0AE3DC8428D7931C00BDFA7C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0AE3DC8528D793B200BDFA7C /* MarvinVisions-Bold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE3DC8628D7993600BDFA7C /* MarvinVisions-Bold.otf in Resources */,
 				0A7DED2728D31877003ED3E0 /* Preview Assets.xcassets in Resources */,
 				0A7DED2428D31877003ED3E0 /* Assets.xcassets in Resources */,
 			);
@@ -341,6 +355,7 @@
 				DEVELOPMENT_TEAM = SK7334S258;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Achtung-baby-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -372,6 +387,7 @@
 				DEVELOPMENT_TEAM = SK7334S258;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Achtung-baby-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

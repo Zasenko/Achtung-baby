@@ -16,34 +16,45 @@ struct ContentView: View {
         ZStack(alignment: .top) {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack() {
-                    Text("ACHTUNG\nBABY")
-                        .font(.largeTitle.bold())
-                        .padding()
+                    VStack{
+                        Text("ACHTUNG")
+                        Text("BABY")
+                            .offset(y: -50)
+                            .foregroundColor(.yellow)
+                    }
+                    .font(.custom("MarvinVisions-Bold", size: 70, relativeTo: .largeTitle))
+                    .background {
+                        Color.black.opacity(0.5)
+                            .clipShape(Circle())
+                            .blur(radius: 70)
+                            .offset(y: -20)
+                    }
+                    Text("Last achtungs:")
+                        .font(.custom("MarvinVisions-Bold", size: 20, relativeTo: .headline))
                         .padding(.leading)
-                        .onD
-                    Text("Your's last achtungs:")
                         .padding(.leading)
-                        .padding(.leading)
-                    
-                    LazyVGrid(columns: [GridItem(.fixed(UIScreen.main.bounds.width / 2)),GridItem(.fixed(UIScreen.main.bounds.width / 2))], spacing: 0){
+                    LazyVGrid(columns: [GridItem(.fixed(UIScreen.main.bounds.width / 2)),
+                                        GridItem(.fixed(UIScreen.main.bounds.width / 2))], alignment: .center) {
                         ForEach(viewModel.myAchtungs.reversed()) { achtung in
-                            CardView(achtung: achtung)
+                            VStack {
+                                CardView(achtung: achtung)
+                            }
                         }
                     }
-                    
                 }
             }
-            
+            .onTapGesture {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+
+            }
             TextView(viewModel: viewModel, isTextViewOpen: $isSettingsOpen)
-            
         }
         .background(
             Color(hex: "#EDEAE5").gradient
         )
     }
-    
-    
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

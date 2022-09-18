@@ -21,32 +21,39 @@ struct AchtungView: View {
     
     var body: some View {
         
-        ZStack() {
-            
+        ZStack {
             bgTimer ? colors[0].ignoresSafeArea() : colors[1].ignoresSafeArea()
-            
             Text(text)
                 .foregroundColor(bgTimer ? colors[1] : colors[0])
-                .frame(width: UIScreen.main.bounds.height, height: UIScreen.main.bounds.width, alignment: .center)
+                .frame(width: UIScreen.main.bounds.height / 1.1, height: UIScreen.main.bounds.width, alignment: .center)
                 .rotationEffect(.degrees(-90))
                 .multilineTextAlignment(.center)
-                .font(.system(size: 1000, weight: .black))
+                .font(.custom("MarvinVisions-Bold", size: 1000))//.system(size: 1000, weight: .black))
+            
                 .minimumScaleFactor(0.01)
                 .lineLimit(4)
                 .onReceive(timer) { _ in
                     self.bgTimer.toggle()
                 }
-            Button {
-                presentationMode.wrappedValue.dismiss()
-            } label: {
-                Image(systemName: "xmark.circle.fill")
-                    .resizable()
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(Color.gray.opacity(0.4))
-                    .padding()
+            
+            
+            HStack {
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.black.opacity(0.4))
+                        .padding()
+                }
+                
             }
-        }//-ZStack
-    }//-body
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.1, alignment: .topTrailing)
+          
+            
+        }
+    }
 }
 
 struct NoticeView_Previews: PreviewProvider {

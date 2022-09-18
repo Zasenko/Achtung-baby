@@ -22,7 +22,6 @@ struct TextView: View {
                 Spacer()
             }
             VStack(alignment: .leading) {
-                
                 if isTextViewOpen {
                     HStack {
                         Text("Customise your achtung:")
