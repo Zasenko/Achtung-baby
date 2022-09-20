@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//красный/ оранжевый / желтый / зеленый / голубой / синий / фиолетовый / розовый / черный / белый
+
 enum PickerColors: String, CaseIterable {
     case blackWhite,
          blackRed,
@@ -20,6 +22,8 @@ enum PickerColors: String, CaseIterable {
          greenPink
     case redYellow,
          redGreen
+    case orangeAqua,
+         orangeBlue
 
     static func enumValueFromString(string value: String) -> PickerColors? {
             return self.allCases.first{ "\($0)" == value }
@@ -44,7 +48,7 @@ extension PickerColors {
         case .yellowRed:
             return [Color(hex: "#FFFF00"), Color(hex: "#FF0000")]
         case .yellowViolet:
-            return [Color(hex: "#FFFF00"), Color(hex: "#8A2BE2")]
+            return [Color(hex: "#FFFD00"), Color(hex: "#6F0AAA")]
         case .greenBlue:
             return [Color(hex: "#00FF00"), Color(hex: "#0000FF")]
         case .greenPink:
@@ -52,7 +56,19 @@ extension PickerColors {
         case .redYellow:
             return [Color(hex: "#FF0000"), Color(hex: "#00FF00")]
         case .redGreen:
-            return [Color(hex: "#FF0000"), Color(hex: "#00FF00")]
+            return [Color(hex: "#FF0000"), Color(hex: "#00CC00")]
+        case .orangeAqua:
+            return [Color(hex: "#DB5C12"), Color(hex: "#00FFFF")]
+        case .orangeBlue:
+            return [Color(hex: "#FFC600"), Color(hex: "#1424C7")]
+        }
+    }
+    
+    func find(color: PickerColors, selectedColor: PickerColors) -> Bool {
+        if color == selectedColor {
+            return true
+        } else {
+            return false
         }
     }
 }

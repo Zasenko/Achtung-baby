@@ -9,9 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isSettingsOpen: Bool = false
-    
     @StateObject var viewModel = AchtungViewModel()
-    
+        
     var body: some View {
         ZStack(alignment: .top) {
             ScrollView(.vertical, showsIndicators: false) {
@@ -33,24 +32,25 @@ struct ContentView: View {
                         .font(.custom("MarvinVisions-Bold", size: 20, relativeTo: .headline))
                         .padding(.leading)
                         .padding(.leading)
-                    LazyVGrid(columns: [GridItem(.fixed(UIScreen.main.bounds.width / 2)),
-                                        GridItem(.fixed(UIScreen.main.bounds.width / 2))], alignment: .center) {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], alignment: .center) {
                         ForEach(viewModel.myAchtungs.reversed()) { achtung in
                             VStack {
                                 CardView(achtung: achtung)
                             }
                         }
                     }
+                    .padding(.horizontal)
                 }
             }
             .onTapGesture {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-
+                
             }
+            
             TextView(viewModel: viewModel, isTextViewOpen: $isSettingsOpen)
         }
         .background(
-            Color(hex: "#EDEAE5").gradient
+            Color.white.gradient
         )
     }
 }

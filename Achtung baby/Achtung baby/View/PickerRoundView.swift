@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct PickerRoundView: View {
+    
     let colors: [Color]
+    @State private var isTapped: Bool = false
+    private let anumationDuratilon: Double = 0.2
     
     var body: some View {
         ZStack {
@@ -17,8 +20,17 @@ struct PickerRoundView: View {
             Circle()
                 .trim(from: 0.5, to: 1.5)
                 .fill(colors[0])
+                
         }
         .frame(width: 60, height: 60)
+        .scaleEffect(isTapped ? 1.6 : 1)
+        .animation(.easeIn(duration: anumationDuratilon), value: isTapped)
+        .onTapGesture {
+            isTapped.toggle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + anumationDuratilon) {
+                isTapped.toggle()
+            }
+        }
     }
 }
 
